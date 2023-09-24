@@ -1,10 +1,12 @@
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\appsettings.Development.json
-F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\appsettings.json
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\EShopperAPI.exe
+F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\appsettings.json
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\EShopperAPI.deps.json
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\EShopperAPI.runtimeconfig.json
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\EShopperAPI.dll
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\EShopperAPI.pdb
+F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\AutoMapper.dll
+F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\Humanizer.dll
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 F:\Practice\BackEnd\C#\EShopper\EShopperAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll

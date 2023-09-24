@@ -8,12 +8,16 @@ namespace EShopperAPI.Repositories
     {
         private readonly EShopperContext _context;
 
+        public ProductRepository(EShopperContext context)
+        {
+            _context = context;
+        }
         public async Task<List<Product>> GetAllProducts()
         {
             try
             {
-                var jobs = await _context.Products.ToListAsync();
-                return jobs;
+                var products = await _context.Products.ToListAsync();
+                return products;
             }
             catch (Exception ex)
             {
