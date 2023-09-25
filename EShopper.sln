@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopperAPI", "EShopperAPI\EShopperAPI.csproj", "{3CC5BDA1-7C9E-4B59-990A-9389A50B857C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShopperAPI", "EShopperAPI\EShopperAPI.csproj", "{3CC5BDA1-7C9E-4B59-990A-9389A50B857C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopperClient", "EShopperClient\EShopperClient.csproj", "{53CB2A21-1ACD-4627-9836-1FFB6ECE42C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3CC5BDA1-7C9E-4B59-990A-9389A50B857C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CC5BDA1-7C9E-4B59-990A-9389A50B857C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CC5BDA1-7C9E-4B59-990A-9389A50B857C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CB2A21-1ACD-4627-9836-1FFB6ECE42C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CB2A21-1ACD-4627-9836-1FFB6ECE42C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CB2A21-1ACD-4627-9836-1FFB6ECE42C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CB2A21-1ACD-4627-9836-1FFB6ECE42C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
