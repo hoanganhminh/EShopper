@@ -9,7 +9,67 @@ namespace EShopperClient.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Home()
+        {
+            try
+            {
+                return View();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return RedirectToAction("ErrorPage");
+            }
+        }
+        public async Task<IActionResult> Product()
+        {
+            try
+            {
+                return View();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return RedirectToAction("ErrorPage");
+            }
+        }
+        public async Task<IActionResult> ProductDetail()
+        {
+            try
+            {
+                return View();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return RedirectToAction("ErrorPage");
+            }
+        }
+        public async Task<IActionResult> Contact()
+        {
+            try
+            {
+                return View();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return RedirectToAction("ErrorPage");
+            }
+        }
+        public async Task<IActionResult> Checkout()
+        {
+            try
+            {
+                return View();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return RedirectToAction("ErrorPage");
+            }
+        }
+        public async Task<IActionResult> Cart()
         {
             try
             {
