@@ -1,9 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EShopperClient.Models;
+using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
+using System.Text.Json;
 
 namespace EShopperClient.Controllers
 {
     public class GuestController : Controller
     {
+        private readonly HttpClient client = null;
+
+        public GuestController()
+        {
+            client = new HttpClient();
+            var contentType = new MediaTypeWithQualityHeaderValue("application/json");
+            client.DefaultRequestHeaders.Accept.Add(contentType);
+        }
         public IActionResult ErrorPage()
         {
             return View();
@@ -25,7 +37,14 @@ namespace EShopperClient.Controllers
         {
             try
             {
-                return View();
+                HttpResponseMessage response = await client.GetAsync("https://localhost:7088/api/Product");
+                string strData = await response.Content.ReadAsStringAsync();
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                List<Product> listProduct = JsonSerializer.Deserialize<List<Product>>(strData, options);
+                return View(listProduct);
             }
             catch (Exception ex)
             {
