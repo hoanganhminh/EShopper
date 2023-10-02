@@ -47,7 +47,7 @@ builder.Services.AddDbContext<EShopperContext>(options =>
 });
 builder.Services.AddCors();
 
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IUserRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
