@@ -1,10 +1,9 @@
 ﻿using EShopperAPI.Models;
 
-namespace EShopperAPI.Repositories.Contracts
+namespace EShopperAPI.Services.Contracts
 {
-    public interface IOrderDetailRepository
+    public interface IOrderDetailService
     {
         public Task<List<OrderDetail>> GetAllOrderDetails();
-
     }
 }

@@ -13,7 +13,7 @@ namespace EShopperAPI.Repositories
             _context = context;
         }
 
-        public async Task<List<OrderDetail>> GetAllIOrderDetails()
+        public async Task<List<OrderDetail>> GetAllOrderDetails()
         {
             try
             {
