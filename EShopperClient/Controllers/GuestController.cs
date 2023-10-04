@@ -25,7 +25,19 @@ namespace EShopperClient.Controllers
         {
             try
             {
-                return View();
+                HttpResponseMessage categoryResponse = await client.GetAsync(APIEndPoints.APIEndPoints.CategoryAPIEndPoints.CATEGORY_PATH);
+                string categoryStrData = await categoryResponse.Content.ReadAsStringAsync();
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                List<CategoryResponse> listCategory = JsonSerializer.Deserialize<List<CategoryResponse>>(categoryStrData, options);
+
+                ViewModel viewModel = new ViewModel
+                {
+                    categoryResponses = listCategory
+                };
+                return View(viewModel);
             }
             catch (Exception ex)
             {
@@ -37,14 +49,24 @@ namespace EShopperClient.Controllers
         {
             try
             {
-                HttpResponseMessage response = await client.GetAsync("https://localhost:7088/api/Product");
-                string strData = await response.Content.ReadAsStringAsync();
+                HttpResponseMessage productResponse = await client.GetAsync(APIEndPoints.APIEndPoints.ProductAPIEndPoints.PRODUCT_PATH);
+                string productStrData = await productResponse.Content.ReadAsStringAsync();
                 var options = new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 };
-                List<Product> listProduct = JsonSerializer.Deserialize<List<Product>>(strData, options);
-                return View(listProduct);
+                List<ProductResponse> listProduct = JsonSerializer.Deserialize<List<ProductResponse>>(productStrData, options);
+
+                HttpResponseMessage categoryResponse = await client.GetAsync(APIEndPoints.APIEndPoints.CategoryAPIEndPoints.CATEGORY_PATH);
+                string categoryStrData = await categoryResponse.Content.ReadAsStringAsync();
+                List<CategoryResponse> listCategory = JsonSerializer.Deserialize<List<CategoryResponse>>(categoryStrData, options);
+
+                ViewModel viewModel = new ViewModel
+                {
+                    productResponses = listProduct,
+                    categoryResponses = listCategory
+                };
+                return View(viewModel);
             }
             catch (Exception ex)
             {

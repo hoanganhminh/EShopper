@@ -16,7 +16,10 @@ namespace EShopperAPI.Repositories
         {
             try
             {
-                var products = await _context.Products.ToListAsync();
+                var products = await _context.Products
+                    .Include(x => x.Category)
+                    //.Include(x => x.Reviews)
+                    .ToListAsync();
                 return products;
             }
             catch (Exception ex)

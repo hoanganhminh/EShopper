@@ -2,6 +2,7 @@
 using EShopperAPI.Repositories.Contracts;
 using EShopperAPI.Services.Contracts;
 using AutoMapper;
+using EShopperAPI.Data.RequestDTO;
 
 namespace EShopperAPI.Services
 {
@@ -16,12 +17,12 @@ namespace EShopperAPI.Services
             _mapper = mapper;
         }
 
-        public async Task<List<Product>> GetAllProducts()
+        public async Task<List<ProductResponse>> GetAllProducts()
         {
             try
             {
                 var products = await _productRepository.GetAllProducts();
-                return products;
+                return _mapper.Map<List<ProductResponse>>(products);
             }
             catch (Exception ex)
             {

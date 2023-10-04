@@ -2,7 +2,7 @@
     Layout = "_Guest_Layout";
     ViewData["Title"] = "Product";
 }
-@model IEnumerable<EShopperClient.Models.Product>
+@model EShopperClient.Models.ViewModel
 
 <!-- Shop Start -->
 <div class="container-fluid pt-5">
@@ -303,7 +303,7 @@
                         </div>
                     </div>
                 </div>
-                @foreach (var item in Model)
+                @foreach (var item in Model.productResponses)
                 {
                     <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
                         <div class="card product-item border-0 mb-4">
